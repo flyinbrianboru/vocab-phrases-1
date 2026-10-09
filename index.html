@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="ga">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Foclóir IRS139</title>
+<meta name="description" content="Ulster Irish vocabulary, phrases, flashcards and quiz — IRS139 class notes.">
+<meta name="theme-color" content="#14362b">
+<style>
+:root{
+  --bg:#f7f4ed; --panel:#fffdf8; --ink:#1d2320; --soft:#5e6a62; --faint:#8b958e;
+  --line:#e1dccf; --line2:#efeae0;
+  --accent:#14362b; --accent2:#2f6b52; --gold:#9a6b1f; --gold-bg:#fbf3e2;
+  --ok:#2f6b52; --ok-bg:#e8f2ec; --no:#9d3a2f; --no-bg:#fbeae7;
+  --shadow:0 1px 2px rgba(29,35,32,.05), 0 6px 20px rgba(29,35,32,.05);
+  --r:14px;
+  --serif:"Iowan Old Style","Palatino Linotype",Palatino,"Book Antiqua",Georgia,"Times New Roman",serif;
+  --sans:system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root:not([data-theme="light"]){
+    --bg:#13161a; --panel:#1b1f24; --ink:#e8e9e6; --soft:#a3aca6; --faint:#78827c;
+    --line:#2b3138; --line2:#242a30;
+    --accent:#9fd4bb; --accent2:#7bbfa2; --gold:#d9b069; --gold-bg:#2a2317;
+    --ok:#7bbfa2; --ok-bg:#1c2a23; --no:#e0897c; --no-bg:#2c1d1b;
+    --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+  }
+}
+:root[data-theme="dark"]{
+  --bg:#13161a; --panel:#1b1f24; --ink:#e8e9e6; --soft:#a3aca6; --faint:#78827c;
+  --line:#2b3138; --line2:#242a30;
+  --accent:#9fd4bb; --accent2:#7bbfa2; --gold:#d9b069; --gold-bg:#2a2317;
+  --ok:#7bbfa2; --ok-bg:#1c2a23; --no:#e0897c; --no-bg:#2c1d1b;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 6px 20px rgba(0,0,0,.25);
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0}
+body{
+  background:var(--bg); color:var(--ink); font-family:var(--sans);
+  font-size:16px; line-height:1.55; -webkit-text-size-adjust:100%;
+}
+.wrap{max-width:900px; margin:0 auto; padding:0 16px 80px}
+
+/* ---------- header ---------- */
+header{border-bottom:1px solid var(--line); background:var(--panel)}
+.hd{max-width:900px;margin:0 auto;padding:18px 16px 0;display:flex;align-items:flex-start;gap:12px;flex-wrap:wrap}
+h1{font-family:var(--serif); font-size:1.6rem; margin:0; letter-spacing:-.01em; font-weight:600}
+h1 span{color:var(--accent2)}
+.sub{color:var(--soft); font-size:.86rem; margin:2px 0 0}
+.hd-right{margin-left:auto;display:flex;gap:8px;align-items:center}
+.iconbtn{
+  background:transparent;border:1px solid var(--line);color:var(--soft);
+  border-radius:9px;padding:6px 10px;cursor:pointer;font-size:.8rem;font-family:inherit;
+}
+.iconbtn:hover{border-color:var(--accent2);color:var(--accent2)}
+
+nav{max-width:900px;margin:0 auto;padding:12px 16px 0;display:flex;gap:4px;overflow-x:auto;scrollbar-width:none}
+nav::-webkit-scrollbar{display:none}
+nav button{
+  background:none;border:0;border-bottom:2px solid transparent;color:var(--soft);
+  padding:8px 12px 10px;font:inherit;font-size:.92rem;cursor:pointer;white-space:nowrap;
+}
+nav button:hover{color:var(--ink)}
+nav button[aria-selected="true"]{color:var(--accent2);border-bottom-color:var(--accent2);font-weight:600}
+
+/* ---------- shared ---------- */
+.panel{background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px;box-shadow:var(--shadow)}
+.ga{font-family:var(--serif)}
+.muted{color:var(--soft)}
+.tiny{font-size:.78rem}
+h2{font-family:var(--serif);font-size:1.18rem;margin:28px 0 10px;font-weight:600}
+h2:first-child{margin-top:0}
+h3{font-size:.95rem;margin:18px 0 6px;color:var(--accent2);font-weight:650}
+.row{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.btn{
+  background:var(--accent);color:var(--panel);border:0;border-radius:10px;
+  padding:9px 16px;font:inherit;font-size:.9rem;font-weight:600;cursor:pointer;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .btn{color:#13161a}}
+:root[data-theme="dark"] .btn{color:#13161a}
+.btn:hover{background:var(--accent2)}
+.btn.ghost{background:transparent;color:var(--accent2);border:1px solid var(--line)}
+.btn.ghost:hover{background:transparent;border-color:var(--accent2)}
+select,input[type=search]{
+  font:inherit;font-size:.9rem;padding:8px 11px;border:1px solid var(--line);
+  border-radius:10px;background:var(--panel);color:var(--ink);
+}
+input[type=search]{width:100%}
+label.lbl{font-size:.78rem;color:var(--faint);display:block;margin-bottom:3px;text-transform:uppercase;letter-spacing:.04em}
+
+/* ---------- chips ---------- */
+.chips{display:flex;gap:6px;flex-wrap:wrap;margin:12px 0}
+.chip{
+  background:var(--panel);border:1px solid var(--line);color:var(--soft);
+  border-radius:999px;padding:5px 12px;font:inherit;font-size:.82rem;cursor:pointer;
+}
+.chip:hover{border-color:var(--accent2);color:var(--accent2)}
+.chip[aria-pressed="true"]{background:var(--accent);border-color:var(--accent);color:var(--panel)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .chip[aria-pressed="true"]{color:#13161a}}
+:root[data-theme="dark"] .chip[aria-pressed="true"]{color:#13161a}
+.chip .n{opacity:.6;font-size:.76rem;margin-left:3px}
+
+/* ---------- entries ---------- */
+.toolbar{position:sticky;top:0;z-index:5;background:var(--bg);padding:14px 0 6px;border-bottom:1px solid var(--line2)}
+.count{font-size:.8rem;color:var(--faint);margin:8px 0 12px}
+.entry{
+  background:var(--panel);border:1px solid var(--line);border-radius:var(--r);
+  padding:13px 15px;margin-bottom:9px;box-shadow:var(--shadow);
+}
+.entry.known{border-left:3px solid var(--ok)}
+.entry-top{display:flex;gap:10px;align-items:baseline}
+.entry .term{font-family:var(--serif);font-size:1.12rem;font-weight:600;line-height:1.3}
+.entry .en{color:var(--soft);font-size:.95rem;margin-top:1px}
+.star{margin-left:auto;background:none;border:0;cursor:pointer;font-size:1.05rem;color:var(--line);padding:0 2px;line-height:1}
+.star:hover{color:var(--gold)}
+.star[aria-pressed="true"]{color:var(--gold)}
+.note{
+  font-size:.875rem;color:var(--soft);margin-top:9px;padding-top:9px;
+  border-top:1px dashed var(--line);line-height:1.6;
+}
+.note b{color:var(--ink);font-weight:600}
+.note i{font-family:var(--serif);font-style:italic;font-size:.95em}
+.cat-tag{font-size:.7rem;color:var(--faint);text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
+.sees{margin-top:8px;display:flex;gap:5px;flex-wrap:wrap}
+.see{
+  background:var(--gold-bg);border:1px solid transparent;color:var(--gold);
+  border-radius:999px;padding:2px 9px;font-size:.76rem;cursor:pointer;font-family:var(--serif);
+}
+.see:hover{border-color:var(--gold)}
+.empty{text-align:center;color:var(--faint);padding:48px 16px}
+
+/* ---------- flashcards ---------- */
+.card{
+  background:var(--panel);border:1px solid var(--line);border-radius:18px;
+  min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;
+  padding:32px 24px;text-align:center;cursor:pointer;box-shadow:var(--shadow);margin:14px 0;
+  user-select:none;
+}
+.card .big{font-family:var(--serif);font-size:1.9rem;line-height:1.25;font-weight:600}
+.card .big.en{font-family:var(--sans);font-size:1.4rem;font-weight:500}
+.card .ans{font-family:var(--serif);font-size:1.45rem;color:var(--accent2);margin-top:14px;font-weight:600}
+.card .ans.en{font-family:var(--sans);font-size:1.2rem;font-weight:500}
+.card .cnote{font-size:.85rem;color:var(--soft);margin-top:16px;max-width:52ch;line-height:1.6;text-align:left}
+.card .hint{font-size:.76rem;color:var(--faint);margin-top:18px}
+.bar{height:5px;background:var(--line2);border-radius:99px;overflow:hidden;margin:2px 0 0}
+.bar i{display:block;height:100%;background:var(--accent2);transition:width .25s}
+.tally{display:flex;gap:14px;font-size:.8rem;color:var(--faint);margin-top:10px}
+.tally b{color:var(--ink)}
+
+/* ---------- quiz ---------- */
+.q{font-family:var(--serif);font-size:1.4rem;font-weight:600;margin:4px 0 4px;line-height:1.3}
+.q.en{font-family:var(--sans);font-size:1.15rem;font-weight:500}
+.opts{display:grid;gap:8px;margin-top:14px}
+.opt{
+  text-align:left;background:var(--panel);border:1px solid var(--line);border-radius:11px;
+  padding:12px 14px;font:inherit;font-size:.95rem;cursor:pointer;color:var(--ink);
+}
+.opt:hover:not(:disabled){border-color:var(--accent2)}
+.opt:disabled{cursor:default}
+.opt.right{background:var(--ok-bg);border-color:var(--ok);color:var(--ink);font-weight:600}
+.opt.wrong{background:var(--no-bg);border-color:var(--no)}
+.opt .ga{font-family:var(--serif)}
+.fb{margin-top:14px;padding:12px 14px;border-radius:11px;background:var(--gold-bg);font-size:.875rem;line-height:1.6;color:var(--soft)}
+.fb b{color:var(--ink)}
+.fb i{font-family:var(--serif)}
+.fb .ga{font-family:var(--serif);font-size:1.05rem;color:var(--ink);font-weight:600}
+.score{font-family:var(--serif);font-size:2.6rem;font-weight:600;color:var(--accent2)}
+.missed{margin-top:16px}
+.missed li{margin-bottom:7px;font-size:.9rem}
+.missed .ga{font-weight:600}
+
+/* ---------- notes ---------- */
+.notes p{font-size:.94rem;line-height:1.7;color:var(--soft)}
+.notes p b, .notes li b{color:var(--ink)}
+.notes i{font-family:var(--serif);font-size:1.02em}
+.notes ul{padding-left:20px;font-size:.94rem;line-height:1.7;color:var(--soft)}
+.notes li{margin-bottom:5px}
+table{border-collapse:collapse;width:100%;font-size:.88rem;margin:10px 0}
+th,td{text-align:left;padding:7px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font-size:.74rem;text-transform:uppercase;letter-spacing:.05em;color:var(--faint);font-weight:600}
+td:first-child{font-family:var(--serif);color:var(--ink)}
+.callout{background:var(--gold-bg);border-radius:11px;padding:12px 15px;font-size:.88rem;color:var(--soft);line-height:1.65;margin:12px 0}
+.callout b{color:var(--ink)}
+.mnemonic{font-family:var(--serif);font-size:1.5rem;letter-spacing:.14em;color:var(--accent2);font-weight:600;text-align:center;margin:6px 0 2px}
+
+@media (max-width:560px){
+  h1{font-size:1.35rem}
+  .card{min-height:220px;padding:26px 18px}
+  .card .big{font-size:1.55rem}
+  .wrap{padding:0 12px 70px}
+  .hd{padding:14px 12px 0}
+  nav{padding:10px 12px 0}
+}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="hd">
+    <div>
+      <h1>Foclóir <span>IRS139</span></h1>
+      <p class="sub">Ulster Irish vocabulary &amp; phrases — browse, flashcards, quiz, grammar notes</p>
+    </div>
+    <div class="hd-right">
+      <button class="iconbtn" id="themeBtn" title="Light / dark">Dath</button>
+      <button class="iconbtn" id="resetBtn" title="Reset progress">Athshocraigh</button>
+    </div>
+  </div>
+  <nav role="tablist">
+    <button role="tab" data-tab="browse" aria-selected="true">Foclóir</button>
+    <button role="tab" data-tab="cards" aria-selected="false">Cártaí</button>
+    <button role="tab" data-tab="quiz" aria-selected="false">Tráth na gCeist</button>
+    <button role="tab" data-tab="notes" aria-selected="false">Nótaí</button>
+  </nav>
+</header>
+
+<div class="wrap">
+
+<!-- ============ BROWSE ============ -->
+<section id="browse">
+  <div class="toolbar">
+    <input type="search" id="q" placeholder="Cuardaigh… (Irish, English or notes)" autocomplete="off">
+    <div class="chips" id="catChips"></div>
+    <div class="chips" id="viewChips">
+      <button class="chip" data-view="all" aria-pressed="true">Gach ceann</button>
+      <button class="chip" data-view="star" aria-pressed="false">★ Réaltaithe</button>
+      <button class="chip" data-view="todo" aria-pressed="false">Le foghlaim</button>
+      <button class="chip" data-view="done" aria-pressed="false">✓ Ar eolas</button>
+    </div>
+  </div>
+  <div class="count" id="count"></div>
+  <div id="list"></div>
+</section>
+
+<!-- ============ CARDS ============ -->
+<section id="cards" hidden>
+  <div class="panel">
+    <div class="row">
+      <div style="flex:1;min-width:150px">
+        <label class="lbl" for="cDeck">Deic</label>
+        <select id="cDeck" style="width:100%"></select>
+      </div>
+      <div style="flex:1;min-width:150px">
+        <label class="lbl" for="cDir">Treo</label>
+        <select id="cDir" style="width:100%">
+          <option value="ge">Gaeilge → Béarla</option>
+          <option value="eg">Béarla → Gaeilge</option>
+          <option value="mix">Measctha</option>
+        </select>
+      </div>
+      <div style="align-self:flex-end"><button class="btn" id="cStart">Tosaigh</button></div>
+    </div>
+  </div>
+  <div id="cArea"></div>
+</section>
+
+<!-- ============ QUIZ ============ -->
+<section id="quiz" hidden>
+  <div class="panel">
+    <div class="row">
+      <div style="flex:1;min-width:150px">
+        <label class="lbl" for="qDeck">Deic</label>
+        <select id="qDeck" style="width:100%"></select>
+      </div>
+      <div style="min-width:110px">
+        <label class="lbl" for="qLen">Ceisteanna</label>
+        <select id="qLen" style="width:100%">
+          <option>10</option><option>20</option><option>30</option>
+        </select>
+      </div>
+      <div style="min-width:150px">
+        <label class="lbl" for="qDir">Treo</label>
+        <select id="qDir" style="width:100%">
+          <option value="mix">Measctha</option>
+          <option value="ge">Gaeilge → Béarla</option>
+          <option value="eg">Béarla → Gaeilge</option>
+        </select>
+      </div>
+      <div style="align-self:flex-end"><button class="btn" id="qStart">Tosaigh</button></div>
+    </div>
+  </div>
+  <div id="qArea"></div>
+</section>
+
+<!-- ============ NOTES ============ -->
+<section id="notes" hidden class="notes">
+
+<h2>Na trí chéim — comparison</h2>
+<p>Three degrees, three names, and the names themselves tell you what they do: <b>bunchéim</b> (base step), <b>breischéim</b> (increase step), <b>sárchéim</b> (surpassing step).</p>
+<table>
+  <tr><th>Céim</th><th>Láithreach</th><th>Caite / coinníollach</th></tr>
+  <tr><td>Bunchéim</td><td>maith</td><td>maith</td></tr>
+  <tr><td>Breischéim</td><td>níos fearr</td><td>ní ba <b>fh</b>earr</td></tr>
+  <tr><td>Sárchéim</td><td>is fearr</td><td>ba <b>fh</b>earr → <i>ab fhearr</i></td></tr>
+</table>
+<div class="callout"><b>Where <i>níos</i> comes from.</b> It is a worn-down <i>ní is</i> — “the thing that is”. That is why the past form is <i>ní ba</i>: the <i>is</i> simply becomes <i>ba</i>. Once you see the join, the odd-looking past comparative stops being arbitrary. Before a vowel or <i>fh</i>, <i>ba</i> → <b>ab</b>: <i>ab fhearr, ab óige, ab áille</i>.</div>
+<ul>
+  <li>Copula: <i>Is fearr tusa ná mise</i> — tighter, more emphatic.</li>
+  <li><i>Tá</i>: <i>Tá tusa níos fearr ná mise</i> — plainer.</li>
+  <li>Past copula: <i>Ba dheacra an rang sin ná rang Airt</i>.</li>
+  <li>Past <i>tá</i>: <i>Bhí an rang sin ní ba dheacra ná rang Airt</i>.</li>
+  <li>Superlative: <i>Is é seo an rang is deacra</i> → <i>Ba é sin an rang ba dheacra</i>.</li>
+  <li>Ulster ranking with <b>bí ar</b>: <i>tá sé ar an fhear is láidre</i>; “one of” = <b>ar dhuine de</b>.</li>
+</ul>
+<p>Common irregulars: <i>maith → fearr</i>, <i>olc → measa</i>, <i>mór → mó</i>, <i>beag → lú</i>, <i>furasta → fusa</i>, <i>fada → faide</i>, <i>gearr → giorra</i>.</p>
+
+<h2>DAFTA — the question words that eclipse</h2>
+<div class="mnemonic">D A F T A</div>
+<p style="text-align:center;margin-top:0" class="tiny">Dóigh · Áit · Fáth · Treo · Am</p>
+<p>These five <i>cén</i> words normally take the <b>indirect relative</b>: <i>a</i> + eclipsis in the present and future, <i>ar</i> + lenition in the past.</p>
+<table>
+  <tr><th>Ceist</th><th>Sampla</th></tr>
+  <tr><td>Cén <b>d</b>óigh</td><td>Cén dóigh a bhfuil a fhios agat?</td></tr>
+  <tr><td>Cén <b>á</b>it</td><td>Cén áit ar rugadh é?</td></tr>
+  <tr><td>Cén <b>f</b>áth</td><td>Cén fáth a ndearna tú é?</td></tr>
+  <tr><td>Cén <b>t</b>reo</td><td>Cén treo a ndeachaigh sé?</td></tr>
+  <tr><td>Cén <b>t-a</b>m</td><td>Cén t-am a mbeidh sé thart?</td></tr>
+</table>
+<div class="callout"><b>The wrinkle.</b> <i>Am</i> and <i>uair</i> are also commonly heard with the <b>direct</b> relative — <i>cén t-am a bheas an rang thart?</i>, <i>an uair a thuig mé</i>. Both are in use. The other four are solidly indirect. Ulster <i>cad chuige</i> behaves exactly like <i>cén fáth</i>: <i>cad chuige ar luaigh sé iad?</i></div>
+
+<h2>Verbs of motion + <i>a</i> + lenited verbal noun</h2>
+<p>In Ulster, a verb of motion is followed by <b>a</b> and a lenited verbal noun, where the standard often uses <i>ag</i>. The <i>a</i> is a worn-down <i>do</i>, and the pattern is the older of the two.</p>
+<ul>
+  <li><i>Téigh</i> — <b>Chuaigh mé a shiopadóireacht.</b></li>
+  <li><i>Tar</i> — <b>Tháinig mé anseo a fhoghlaim Gaeilge.</b></li>
+  <li><i>Imigh</i> — <b>D'imigh sé a thógáil tí.</b></li>
+  <li><i>Tosaigh</i> — <b>Thosaigh sé a chur ceiste.</b></li>
+</ul>
+<p>Note the genitive on the noun after the verbal noun: <i>tógáil tí</i>, <i>cur ceiste</i>. Ulster also uses <b>ag gabháil</b> where the standard has <i>ag dul</i>: <i>tá mé ag gabháil do do phógadh</i>.</p>
+
+<h2>An <i>‘a’</i> na huilíochta — “all that”</h2>
+<p>A special relative <i>a</i> meaning <b>all that</b>, taking eclipsis. It makes a whole clause into a quantity.</p>
+<ul>
+  <li><b>Sin a dtuigim</b> — that's all I understand.</li>
+  <li><b>Sin a ndeir sé</b> — that's all he says.</li>
+  <li><b>A bhfuil agam</b> — all that I have.</li>
+  <li>With <i>de</i> in the past: <b>dá bhfaca mé</b>, <b>dár casadh orm riamh</b> — of all I ever saw / ever met.</li>
+</ul>
+<p>So: <i>Sin an scannán ba mheasa <b>dá bhfaca mé</b></i> = that's the worst film of all I ever saw.</p>
+
+<h2>Feelings sit <i>on</i> you</h2>
+<p>English says “I am proud”. Irish says the pride is on you. The feeling is a noun, and each one takes its own second preposition for the cause — these are not predictable and have to be learned as pairs.</p>
+<table>
+  <tr><th>Patrún</th><th>Brí</th></tr>
+  <tr><td>áthas / brón ar X faoi Y</td><td>happy / sorry about</td></tr>
+  <tr><td>bród / náire ar X <b>as</b> Y</td><td>proud / ashamed of</td></tr>
+  <tr><td>eagla / faitíos ar X <b>roimh</b> Y</td><td>afraid of</td></tr>
+  <tr><td>fearg / éad ar X <b>le</b> Y</td><td>angry with / jealous of</td></tr>
+  <tr><td>imní / iontas ar X <b>faoi</b> Y</td><td>worried about / surprised at</td></tr>
+  <tr><td>deifir / ocras / tart / tuirse ar X</td><td>in a hurry / hungry / thirsty / tired</td></tr>
+  <tr><td>dúil / suim <b>ag</b> X <b>i</b> Y</td><td>fond of / interested in</td></tr>
+  <tr><td>meas <b>ag</b> X <b>ar</b> Y</td><td>respect for</td></tr>
+</table>
+<p>“Became” is <b>tháinig … ar</b>: <i>tháinig náire orm</i>. Names lenite after <i>ar</i>: <i>ar Shíle, ar Sheán, ar Chaoimhín</i>.</p>
+
+<h2>Clanna focal — word families</h2>
+<p>The fastest way to hold a hundred words is to notice they are twenty words wearing hats.</p>
+<h3>bun — base</h3>
+<p><i>bun</i> (base) · <i>bunúsach</i> (basic) · <i>bunaigh</i> (to found) · <i>bunscoil</i> (primary school) · <i>bunchéim</i> (positive degree) · <i>ó bhun go barr</i> (top to bottom) · <i>bun na spéire</i> (the horizon)</p>
+<h3>riail — rule</h3>
+<p><i>riail</i> (rule) · <i>rialta</i> (regular) · <i>bean rialta</i> (a nun — a woman under a rule) · <i>rialaigh</i> (to rule) · <i>rialtas</i> (government) · <i>neamhrialta</i> (irregular)</p>
+<h3>áirithe — reckoned, particular</h3>
+<p><i>áireamh</i> (counting) · <i>áirithe</i> (certain, particular) · <i>go háirithe</i> (especially) · <i>in áirithe</i> (reserved) · <i>áiritheoir</i> (a counter)</p>
+<h3>sín — stretch</h3>
+<p><i>sín</i> (to stretch) · <i>síneadh</i> (an extension) · <i>síneadh fada</i> (the long accent — a “long stretch”) · <i>sínte</i> (stretched out)</p>
+<h3>bain — take, extract</h3>
+<p><i>bain úsáid as</i> (use) · <i>bain amach</i> (achieve, reach) · <i>bain triail as</i> (try) · <i>bain sult as</i> (enjoy) · <i>bain gáire as duine</i> (make someone laugh) · <i>baineann sin truisle astu</i> (that trips them up) · <i>a bhaineann le</i> (relating to)</p>
+<h3>corr — odd, occasional</h3>
+<p><i>corruair</i> (occasionally) · <i>corrdhuine</i> (the odd person) · <i>corrfhocal</i> (the odd word) · <i>corrlá</i> (the odd day)</p>
+<h3>cuid — share, portion</h3>
+<p>Used with things that are not inherently yours — mass nouns, abstractions, plurals: <i>mo chuid airgid</i>, <i>do chuid Gaeilge</i>, <i>ár gcuid cainte</i>, <i>dá gcuid féin</i>. Also <i>cuid mhór</i> (a lot) and <i>an chuid is mó</i> (most).</p>
+<h3>dóigh — way, manner</h3>
+<p><i>cén dóigh?</i> (how?) · <i>is dóigh liom</i> (I think) · <i>ar dóigh</i> (great) · <i>sa dóigh is go</i> (so that) · <i>ar dhóigh éigin</i> (somehow)</p>
+
+<h2>Na treonna — why the compass works</h2>
+<div class="callout">Irish direction words are built from a person <b>facing the rising sun</b>. East is in front — <i>oirthear</i>, from <i>oir</i> (front). West is behind — <i>iarthar</i>, from <i>iar</i> (after, behind). South is on the right — <i>deisceart</i>, from <i>deas</i> (right). North is on the left — <i>tuaisceart</i>, from <i>tuath</i> (left). The compass is a human body turned to the dawn, and <i>deas</i> is also why <i>deis</i> means both the right-hand side and an opportunity.</div>
+<p>Motion is built in. <i>Siar</i> = to the west, <b>aniar</b> = from the west; <i>soir</i> = to the east, <b>anoir</b> = from the east; <i>ó dheas</i>, <i>aneas</i>; <i>ó thuaidh</i>, <i>aduaidh</i>. So <i>gaoth aniar</i> is a west wind — one blowing <i>from</i> the west. And <i>i bhfad siar</i> means long ago: Irish lays time out east to west, with the past in the west.</p>
+
+<h2>Amlíne — the history notes</h2>
+<table>
+  <tr><th>Tréimhse</th><th>Imeacht</th></tr>
+  <tr><td>5ú haois</td><td>An Chríostaíocht — the Latin alphabet arrives with monastic scribes, and Irish ends up with the oldest vernacular literature in Western Europe after Greek and Latin.</td></tr>
+  <tr><td>9ú haois</td><td>Na Lochlannaigh — raids from 795, Dublin founded 841. They leave a layer of sea and trade vocabulary: <i>bád, margadh, pingin</i>.</td></tr>
+  <tr><td>12ú haois</td><td>Na hAngla-Normannaigh — landing 1169. Within generations many are Irish in speech and law; the Statutes of Kilkenny (1366) try to stop it.</td></tr>
+  <tr><td>17ú haois</td><td>Plandáil Uladh — from 1609, after the Flight of the Earls in 1607.</td></tr>
+  <tr><td>19ú haois</td><td>Collapse — Famine, emigration, the National Schools. Irish survives longest where there is least money: <i>labhairt na Gaeilge i measc na mbochtán</i>.</td></tr>
+</table>
+<div class="callout"><b>Correction worth noting:</b> the class sheet files the Plantation of Ulster under the 19th century. It is 17th — 1609. The 19th century is the century of collapse, not plantation.</div>
+<div class="callout"><b>Gall.</b> The word started as “a Gaul”, then came to mean any foreigner — first the Norse, later the Anglo-Normans and English. That drift gives <i>Dubhghaill</i> and <i>Fionnghaill</i> (dark and fair foreigners, i.e. Danes and Norwegians), which survive in the surname Ó Dubhghaill (Doyle) and the place-name Fine Gall (Fingal). <b>Henri d'Arbois de Jubainville</b> (1827–1910), who held the first chair of Celtic at the Collège de France, argued for a direct line from the religion and institutions of Celtic Gaul to what survives in the early Irish sagas — which is why he turns up in a lecture setting Gaul against Rome.</div>
+
+<h2>Ulaidh vs An Caighdeán</h2>
+<table>
+  <tr><th>Ulaidh</th><th>Caighdeán</th><th>Brí</th></tr>
+  <tr><td>doiligh</td><td>deacair</td><td>difficult</td></tr>
+  <tr><td>fosta</td><td>freisin</td><td>also</td></tr>
+  <tr><td>cuid mhór / barraíocht</td><td>a lán / an iomarca</td><td>a lot / too much</td></tr>
+  <tr><td>cluin, chluintear, le cluinstin</td><td>clois, cloistear, le cloisteáil</td><td>hear</td></tr>
+  <tr><td>amharc ar</td><td>féach ar</td><td>look at</td></tr>
+  <tr><td>thig liom / thiocfadh liom</td><td>is féidir liom / d'fhéadfainn</td><td>I can / could</td></tr>
+  <tr><td>cad é mar / cén dóigh</td><td>conas</td><td>how</td></tr>
+  <tr><td>cad chuige</td><td>cén fáth</td><td>why</td></tr>
+  <tr><td>in amanna</td><td>uaireanta</td><td>at times</td></tr>
+  <tr><td>ar na mallaibh</td><td>le déanaí</td><td>recently</td></tr>
+  <tr><td>go háirid</td><td>go háirithe</td><td>especially</td></tr>
+  <tr><td>toiseacht</td><td>tosú</td><td>starting</td></tr>
+  <tr><td>cuidigh le</td><td>cabhraigh le</td><td>help</td></tr>
+  <tr><td>de dhíth ar</td><td>ag teastáil ó</td><td>needed by</td></tr>
+  <tr><td>scairt a chur ar</td><td>glaoch a chur ar</td><td>to ring someone</td></tr>
+  <tr><td>in éadan</td><td>i gcoinne</td><td>against</td></tr>
+  <tr><td>madadh, gen. madaidh</td><td>madra</td><td>dog</td></tr>
+  <tr><td>domh, daofa</td><td>dom, dóibh</td><td>to me, to them</td></tr>
+  <tr><td>teangaidh</td><td>teanga</td><td>language</td></tr>
+  <tr><td>a bhíos, a bheas</td><td>a bhíonn, a bheidh</td><td>that is / will be</td></tr>
+  <tr><td>ar an chúrsa, leis an Ghaeilge</td><td>ar an gcúrsa, leis an nGaeilge</td><td>lenition vs eclipsis after preposition + <i>an</i></td></tr>
+</table>
+
+<h2>An dá réimniú — the two conjugations</h2>
+<p>Two conjugations, plus eleven irregular verbs. The quickest test is the <b>future</b>.</p>
+<table>
+  <tr><th></th><th>1ú réimniú (mol)</th><th>2ú réimniú (ceannaigh)</th></tr>
+  <tr><td>Root</td><td>one syllable: <i>mol, bris, dún, ól</i></td><td>two+, ending <i>-igh</i>: <i>ceannaigh, bailigh</i>; or syncopating <i>-ir/-il/-in/-is</i>: <i>imir, oscail, labhair, inis</i></td></tr>
+  <tr><td>Láithreach</td><td>molann</td><td>ceannaíonn</td></tr>
+  <tr><td>Fáistineach</td><td>mol<b>f</b>aidh</td><td>ceann<b>ó</b>idh</td></tr>
+  <tr><td>Coinníollach</td><td>mholfadh</td><td>cheannódh</td></tr>
+  <tr><td>Gnáthchaite</td><td>mholadh</td><td>cheannaíodh</td></tr>
+  <tr><td>Aidiacht bhriathartha</td><td>molta</td><td>ceannaithe</td></tr>
+</table>
+<div class="callout"><b>The test:</b> an <b>f</b> in the future means first conjugation; a long <b>ó/eo</b> means second. Ulster speech often keeps the older <i>-óchaidh / -eochaidh</i>: <i>cheannóchadh sé</i>, <i>d'imeochadh sé</i>.</div>
+<p>The eleven irregulars — <i>bí, abair, beir, clois/cluin, déan, faigh, feic, ith, tabhair, tar, téigh</i> — are the verbs you use most. High-frequency verbs resist being tidied up; that is true in every language with irregular verbs.</p>
+
+<h2>Má agus dá</h2>
+<ul>
+  <li><b>Má</b> = if, for something real or open. Ordinary tenses, <b>lenition</b>: <i>má thuigeann tú, má bhí sé ann</i>. Never a future — use the present: <i>má thagann sé amárach</i>.</li>
+  <li><b>Mura</b> (+ eclipsis) is its negative: <i>mura dtuigeann tú</i>. Past <b>murar</b> + lenition: <i>murar thuig siad</i>.</li>
+  <li><b>Dá</b> = if, for something unreal. <b>Eclipsis + conditional</b>: <i>dá mbeadh an t-airgead agam, cheannóinn é</i>.</li>
+  <li>Copula: <b>más</b> for the real case, <b>dá mba</b> for the unreal.</li>
+</ul>
+<p><b>Quick test:</b> if English can say “if … <i>were</i>”, you need <i>dá</i>. If it can say “if … is / was”, you need <i>má</i>.</p>
+
+<h2>Scríofa vs labhartha</h2>
+<p>Write the full standard form; train your ear and your mouth to the reduced one. Reading a text aloud exactly as spelled is the surest way to sound like a learner.</p>
+<table>
+  <tr><th>Scríofa</th><th>Le cluinstin</th></tr>
+  <tr><td>a dúirt mé</td><td>a dúirt me — unstressed pronoun shortens</td></tr>
+  <tr><td>rinne siad</td><td>rinn' siad</td></tr>
+  <tr><td>oifig an phoist</td><td>oifig a' phoist — the <i>n</i> goes, the lenition stays</td></tr>
+  <tr><td>fear an tí</td><td>fear a' tí</td></tr>
+  <tr><td>Léim an Mhadaidh</td><td>Limavady</td></tr>
+  <tr><td>Port an Pheire</td><td>Portaferry</td></tr>
+  <tr><td>ag ól, ag éisteacht</td><td>the <i>g</i> survives before a vowel</td></tr>
+  <tr><td>ag siúl, ag teacht</td><td>a' siúl, a' teacht — it drops before a consonant</td></tr>
+  <tr><td>chun an bhaile</td><td>'na bhaile</td></tr>
+  <tr><td>agus</td><td>is, 's</td></tr>
+</table>
+
+<p class="tiny" style="margin-top:34px;color:var(--faint)">Entries are drawn from IRS139 class notes. Grammar explanations and background notes added as a study aid — check anything marked uncertain with your lecturer.</p>
+</section>
+
+</div>
+
+<script src="vocab.js"></script>
+<script>
+(function(){
+"use strict";
+const V = window.VOCAB, C = window.CATS;
+const KEY = "foclóir-irs139-v1";
+
+/* ---------- storage ---------- */
+let S = { known:{}, star:{} };
+try { const raw = localStorage.getItem(KEY); if (raw) S = Object.assign(S, JSON.parse(raw)); } catch(e){}
+function save(){ try { localStorage.setItem(KEY, JSON.stringify(S)); } catch(e){} }
+const isKnown = g => (S.known[g]||0) >= 2;
+const isStar  = g => !!S.star[g];
+
+/* ---------- helpers ---------- */
+const fold = s => s.normalize("NFD").replace(/[̀-ͯ]/g,"").replace(/[''`]/g,"'").toLowerCase();
+const strip = s => String(s).replace(/<[^>]*>/g,"");
+const esc = s => String(s).replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+const shuffle = a => { a=a.slice(); for(let i=a.length-1;i>0;i--){const j=(Math.random()*(i+1))|0;[a[i],a[j]]=[a[j],a[i]];} return a; };
+const $ = s => document.querySelector(s);
+
+/* ---------- theme ---------- */
+const themeBtn = $("#themeBtn");
+try { const t = localStorage.getItem(KEY+":theme"); if (t) document.documentElement.dataset.theme = t; } catch(e){}
+function themeLabel(){
+  const cur = document.documentElement.dataset.theme
+    || (matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light");
+  themeBtn.textContent = cur === "dark" ? "Solas" : "Dorcha";
+}
+themeLabel();
+themeBtn.onclick = () => {
+  const cur = document.documentElement.dataset.theme;
+  const next = cur === "dark" ? "light" : cur === "light" ? "dark"
+    : (matchMedia("(prefers-color-scheme: dark)").matches ? "light" : "dark");
+  document.documentElement.dataset.theme = next;
+  try { localStorage.setItem(KEY+":theme", next); } catch(e){}
+  themeLabel();
+};
+
+$("#resetBtn").onclick = () => {
+  if (!confirm("Clear all progress (known cards and stars)?")) return;
+  S = { known:{}, star:{} }; save(); renderList(); buildDecks();
+};
+
+/* ---------- tabs ---------- */
+const tabs = [...document.querySelectorAll("nav button")];
+tabs.forEach(b => b.onclick = () => {
+  tabs.forEach(x => x.setAttribute("aria-selected", String(x === b)));
+  ["browse","cards","quiz","notes"].forEach(id => $("#"+id).hidden = (id !== b.dataset.tab));
+  window.scrollTo(0,0);
+});
+
+/* ================= BROWSE ================= */
+let filterCat = "", filterView = "all", query = "";
+
+(function catChips(){
+  const counts = {};
+  V.forEach(e => counts[e.cat] = (counts[e.cat]||0)+1);
+  const host = $("#catChips");
+  const mk = (key, label, n) => {
+    const b = document.createElement("button");
+    b.className = "chip"; b.dataset.cat = key;
+    b.setAttribute("aria-pressed", String(key === filterCat));
+    b.innerHTML = esc(label) + ' <span class="n">' + n + '</span>';
+    b.onclick = () => {
+      filterCat = (filterCat === key) ? "" : key;
+      [...host.children].forEach(c => c.setAttribute("aria-pressed", String(c.dataset.cat === filterCat)));
+      renderList();
+    };
+    host.appendChild(b);
+  };
+  mk("", "Uile", V.length);
+  Object.keys(C).forEach(k => mk(k, C[k].name, counts[k]||0));
+})();
+
+[...$("#viewChips").children].forEach(b => b.onclick = () => {
+  filterView = b.dataset.view;
+  [...$("#viewChips").children].forEach(c => c.setAttribute("aria-pressed", String(c === b)));
+  renderList();
+});
+
+$("#q").addEventListener("input", e => { query = fold(e.target.value.trim()); renderList(); });
+
+function matches(e){
+  if (filterCat && e.cat !== filterCat) return false;
+  if (filterView === "star" && !isStar(e.ga)) return false;
+  if (filterView === "todo" && isKnown(e.ga)) return false;
+  if (filterView === "done" && !isKnown(e.ga)) return false;
+  if (!query) return true;
+  return fold(e.ga + " " + e.en + " " + strip(e.note||"") + " " + (e.see||[]).join(" ")).includes(query);
+}
+
+function renderList(){
+  const rows = V.filter(matches);
+  const done = V.filter(e => isKnown(e.ga)).length;
+  $("#count").textContent = rows.length + " / " + V.length + " iontráil  ·  " + done + " ar eolas  ·  " +
+    V.filter(e => isStar(e.ga)).length + " réaltaithe";
+  const host = $("#list");
+  if (!rows.length){ host.innerHTML = '<div class="empty">Faic le fáil. / Nothing found.</div>'; return; }
+  const frag = document.createDocumentFragment();
+  rows.forEach(e => {
+    const d = document.createElement("div");
+    d.className = "entry" + (isKnown(e.ga) ? " known" : "");
+    let html = '<div class="entry-top">'
+      + '<div><div class="term">' + esc(e.ga) + '</div><div class="en">' + esc(e.en) + '</div></div>'
+      + '<button class="star" aria-pressed="' + isStar(e.ga) + '" title="Réaltaigh">'
+      + (isStar(e.ga) ? "★" : "☆") + '</button></div>';
+    if (e.note) html += '<div class="note">' + e.note + '</div>';
+    html += '<div class="sees"><span class="cat-tag">' + esc(C[e.cat].name) + '</span>';
+    (e.see||[]).forEach(s => html += '<button class="see" data-see="' + esc(s) + '">' + esc(s) + '</button>');
+    html += '</div>';
+    d.innerHTML = html;
+    d.querySelector(".star").onclick = () => {
+      if (S.star[e.ga]) delete S.star[e.ga]; else S.star[e.ga] = 1;
+      save(); renderList();
+    };
+    d.querySelectorAll(".see").forEach(b => b.onclick = () => {
+      $("#q").value = b.dataset.see; query = fold(b.dataset.see);
+      filterCat = ""; [...$("#catChips").children].forEach(c => c.setAttribute("aria-pressed", String(!c.dataset.cat)));
+      renderList(); window.scrollTo({top:0, behavior:"smooth"});
+    });
+    frag.appendChild(d);
+  });
+  host.replaceChildren(frag);
+}
+renderList();
+
+/* ================= DECKS ================= */
+function deckItems(key){
+  if (key === "all")  return V.slice();
+  if (key === "star") return V.filter(e => isStar(e.ga));
+  if (key === "todo") return V.filter(e => !isKnown(e.ga));
+  return V.filter(e => e.cat === key);
+}
+function buildDecks(){
+  ["#cDeck","#qDeck"].forEach(sel => {
+    const el = $(sel), prev = el.value;
+    const opts = [["all","Gach iontráil"],["todo","Le foghlaim"],["star","★ Réaltaithe"]]
+      .concat(Object.keys(C).map(k => [k, C[k].name]));
+    el.innerHTML = opts.map(([k,label]) => {
+      const n = deckItems(k).length;
+      return '<option value="'+k+'"'+(k===prev?" selected":"")+'>'+esc(label)+' ('+n+')</option>';
+    }).join("");
+  });
+}
+buildDecks();
+
+/* ================= FLASHCARDS ================= */
+let deck = [], idx = 0, flipped = false, tally = {y:0,n:0};
+
+$("#cStart").onclick = () => {
+  const items = deckItems($("#cDeck").value);
+  if (!items.length){ $("#cArea").innerHTML = '<div class="empty">Tá an deic seo folamh.</div>'; return; }
+  deck = shuffle(items); idx = 0; flipped = false; tally = {y:0,n:0};
+  drawCard();
+};
+
+function dirFor(mode){ return mode === "mix" ? (Math.random() < .5 ? "ge" : "eg") : mode; }
+let curDir = "ge";
+
+function drawCard(){
+  const host = $("#cArea");
+  if (idx >= deck.length){
+    host.innerHTML = '<div class="panel" style="text-align:center;padding:34px">'
+      + '<div class="score">' + tally.y + '/' + deck.length + '</div>'
+      + '<p class="muted">Deic críochnaithe.</p>'
+      + '<button class="btn" id="again">Arís</button></div>';
+    $("#again").onclick = () => $("#cStart").click();
+    buildDecks(); renderList();
+    return;
+  }
+  const e = deck[idx];
+  if (!flipped) curDir = dirFor($("#cDir").value);
+  const frontIsGa = curDir === "ge";
+  const front = frontIsGa ? e.ga : e.en;
+  const back  = frontIsGa ? e.en : e.ga;
+
+  let inner = '<div class="big' + (frontIsGa ? "" : " en") + '">' + esc(front) + '</div>';
+  if (flipped){
+    inner += '<div class="ans' + (frontIsGa ? " en" : "") + '">' + esc(back) + '</div>';
+    if (e.note) inner += '<div class="cnote">' + e.note + '</div>';
+  } else {
+    inner += '<div class="hint">Cliceáil nó brúigh <b>spás</b> le casadh</div>';
+  }
+
+  host.innerHTML =
+    '<div class="bar"><i style="width:' + ((idx)/deck.length*100) + '%"></i></div>' +
+    '<div class="tally"><span>Cárta <b>' + (idx+1) + '</b> / ' + deck.length + '</span>' +
+    '<span>✓ <b>' + tally.y + '</b></span><span>↻ <b>' + tally.n + '</b></span>' +
+    '<span class="muted">' + esc(C[e.cat].name) + '</span></div>' +
+    '<div class="card" id="theCard">' + inner + '</div>' +
+    (flipped
+      ? '<div class="row"><button class="btn ghost" id="no">↻ Arís</button><button class="btn" id="yes">✓ Tá sé agam</button></div>'
+      : '<div class="row"><button class="btn ghost" id="flip">Cas an cárta</button></div>');
+
+  const flip = () => { flipped = true; drawCard(); };
+  $("#theCard").onclick = () => { if (!flipped) flip(); };
+  if ($("#flip")) $("#flip").onclick = flip;
+  if ($("#yes")) $("#yes").onclick = () => mark(true);
+  if ($("#no"))  $("#no").onclick  = () => mark(false);
+}
+
+function mark(good){
+  const g = deck[idx].ga;
+  S.known[g] = good ? Math.min(3, (S.known[g]||0)+1) : 0;
+  good ? tally.y++ : tally.n++;
+  save(); idx++; flipped = false; drawCard();
+}
+
+document.addEventListener("keydown", ev => {
+  if ($("#cards").hidden || !deck.length || idx >= deck.length) return;
+  if (ev.code === "Space"){ ev.preventDefault(); if (!flipped){ flipped = true; drawCard(); } }
+  else if (flipped && (ev.key === "1" || ev.key === "ArrowLeft")) mark(false);
+  else if (flipped && (ev.key === "2" || ev.key === "ArrowRight")) mark(true);
+});
+
+/* ================= QUIZ ================= */
+let qs = [], qi = 0, qScore = 0, qMissed = [];
+
+$("#qStart").onclick = () => {
+  const pool = deckItems($("#qDeck").value).filter(e => !e.noq);
+  if (pool.length < 4){ $("#qArea").innerHTML = '<div class="empty">Teastaíonn 4 iontráil ar a laghad sa deic seo.</div>'; return; }
+  const n = Math.min(parseInt($("#qLen").value,10), pool.length);
+  const mode = $("#qDir").value;
+  qs = shuffle(pool).slice(0,n).map(e => {
+    const dir = mode === "mix" ? (Math.random() < .5 ? "ge" : "eg") : mode;
+    const sameCat = V.filter(x => x.cat === e.cat && x.ga !== e.ga && !x.noq);
+    const others  = V.filter(x => x.cat !== e.cat && x.ga !== e.ga && !x.noq);
+    const pick = shuffle(sameCat).slice(0,3);
+    while (pick.length < 3) { const c = shuffle(others)[0]; if (c && !pick.includes(c)) pick.push(c); }
+    return { e, dir, opts: shuffle([e].concat(pick)) };
+  });
+  qi = 0; qScore = 0; qMissed = [];
+  drawQ();
+};
+
+function drawQ(){
+  const host = $("#qArea");
+  if (qi >= qs.length){
+    let html = '<div class="panel" style="text-align:center;padding:30px">'
+      + '<div class="score">' + qScore + '/' + qs.length + '</div>'
+      + '<p class="muted">' + (qScore === qs.length ? "Gan locht." : Math.round(qScore/qs.length*100) + "%") + '</p>'
+      + '<button class="btn" id="qAgain">Arís</button></div>';
+    if (qMissed.length){
+      html += '<div class="panel missed" style="margin-top:14px"><h3 style="margin-top:0">Le hathbhreithniú</h3><ul>'
+        + qMissed.map(e => '<li><span class="ga">' + esc(e.ga) + '</span> — ' + esc(e.en) + '</li>').join("")
+        + '</ul></div>';
+    }
+    host.innerHTML = html;
+    $("#qAgain").onclick = () => $("#qStart").click();
+    renderList();
+    return;
+  }
+  const q = qs[qi], frontIsGa = q.dir === "ge";
+  const prompt = frontIsGa ? q.e.ga : q.e.en;
+
+  host.innerHTML =
+    '<div class="bar" style="margin-top:14px"><i style="width:' + (qi/qs.length*100) + '%"></i></div>' +
+    '<div class="tally"><span>Ceist <b>' + (qi+1) + '</b> / ' + qs.length + '</span><span>✓ <b>' + qScore + '</b></span></div>' +
+    '<div class="panel" style="margin-top:8px">' +
+      '<div class="tiny muted">' + (frontIsGa ? "Cad is brí leis seo?" : "Cad é an Ghaeilge air seo?") + '</div>' +
+      '<div class="q' + (frontIsGa ? "" : " en") + '">' + esc(prompt) + '</div>' +
+      '<div class="opts" id="opts"></div>' +
+      '<div id="fb"></div>' +
+    '</div>';
+
+  const optHost = $("#opts");
+  q.opts.forEach(o => {
+    const b = document.createElement("button");
+    b.className = "opt";
+    const text = frontIsGa ? o.en : o.ga;
+    b.innerHTML = frontIsGa ? esc(text) : '<span class="ga">' + esc(text) + '</span>';
+    b.onclick = () => answer(b, o === q.e, q);
+    optHost.appendChild(b);
+  });
+}
+
+function answer(btn, right, q){
+  [...$("#opts").children].forEach(b => b.disabled = true);
+  const correctText = q.dir === "ge" ? q.e.en : q.e.ga;
+  [...$("#opts").children].forEach(b => { if (strip(b.textContent) === correctText) b.classList.add("right"); });
+  if (right){
+    qScore++;
+    S.known[q.e.ga] = Math.min(3, (S.known[q.e.ga]||0)+1);
+  } else {
+    btn.classList.add("wrong");
+    qMissed.push(q.e);
+    S.known[q.e.ga] = 0;
+  }
+  save();
+  let fb = '<div class="fb">' + (right ? "<b>Sin é.</b> " : "<b>Níorbh é.</b> ")
+    + '<span class="ga">' + esc(q.e.ga) + '</span> — ' + esc(q.e.en) + '.';
+  if (q.e.note) fb += '<div style="margin-top:7px">' + q.e.note + '</div>';
+  fb += '</div><div class="row" style="margin-top:12px"><button class="btn" id="next">Ar aghaidh →</button></div>';
+  $("#fb").innerHTML = fb;
+  $("#next").onclick = () => { qi++; drawQ(); };
+  $("#next").focus();
+}
+
+})();
+</script>
+</body>
+</html>
